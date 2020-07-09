@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     useEffect(() => setMounted(true), []);
     return mounted;
   };
-  const queryString = `/api/lol/summoner/v4/summoners/by-name/rjeezy?api_key=RGAPI-49a1bd06-4a9a-45aa-98e3-fe21be89993b`;
+  const queryString = `/api/lol/summoner/v4/summoners/by-name/rjeezy?api_key=${process.env.NEXT_PUBLIC_API_KEY}`;
 
   const mounted = useMounted();
 
