@@ -3,7 +3,11 @@ import useSWR from "swr";
 import fetchSummoner from "../../utils/fetchSummoner";
 import fetchLeague from "../../utils/fetchLeague";
 
-const Summoner = ({ name }) => {
+interface SummonerProps {
+  name: string
+}
+
+const Summoner: React.FC<SummonerProps> = ({ name }) => {
   const summoner = fetchSummoner(name);
 
   const league = fetchLeague(summoner.id);
