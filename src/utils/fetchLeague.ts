@@ -10,8 +10,8 @@ const fetchLeague = (summonerId: number) => {
     fetcher
   );
 
-  if (!league) return 'Loading...';
-  if (error) return 'Error loading';
+  if (!league) return "Loading...";
+  if (error) return "Error loading";
 
   return league;
 };
