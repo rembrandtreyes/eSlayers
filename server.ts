@@ -2,9 +2,14 @@ const express = require("express");
 const next = require("next");
 
 const devProxy = {
-  "/api": {
+  "/na1": {
     target: "https://na1.api.riotgames.com/",
-    pathRewrite: { "^/api": "/" },
+    pathRewrite: { "^/na1": "/" },
+    changeOrigin: true,
+  },
+  "/americas": {
+    target: "https://americas.api.riotgames.com/",
+    pathRewrite: { "^/americas": "/" },
     changeOrigin: true,
   },
 };
