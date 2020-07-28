@@ -1,7 +1,11 @@
 import fetchTftMatch from "../../utils/fetchTftMatch";
 import Participant from "../Participant";
 
-const Match = ({ matches }) => {
+interface MatchProps {
+  matches: string;
+}
+
+const Match: React.FC<MatchProps> = ({ matches }) => {
   const { match, isLoading, isError } = fetchTftMatch(matches);
 
   if (isLoading) return <p>Loading Match</p>;
@@ -16,7 +20,10 @@ const Match = ({ matches }) => {
     <div>
       <p>{humanDate}</p>
       {participants.map((participant) => (
-        <Participant key={participant.puuidz} puuid={participant.puuid} />
+        <>
+          <Participant key={participant.puuid} puuid={participant.puuid} />
+          <p>Placement: {participant.placement}</p>
+        </>
       ))}
     </div>
   );
