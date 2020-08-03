@@ -10,9 +10,15 @@ interface SummonerProps {
 const Summoner: React.FC<SummonerProps> = ({ name }) => {
   const summoner = fetchSummoner(name);
   const league = fetchLeague(summoner.id);
-  const matches = fetchTftMatches(summoner.puuid);
+  const { matches, isLoading, isError } = fetchTftMatches(summoner.puuid);
 
   const winRate = (league[0].wins / league[0].losses) * 100;
+
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error</div>;
+
+  console.log(matches);
+  console.log(summoner.puuid);
 
   return (
     <>
@@ -23,7 +29,9 @@ const Summoner: React.FC<SummonerProps> = ({ name }) => {
       <h2>Wins: {league[0].wins}</h2>
       <h2>Loses: {league[0].losses}</h2>
       <h2>Win Rate: {winRate.toFixed(2)}%</h2>
-      {matches.length === 1 && matches.map((match) => <Match key={match} matches={match} />)}
+      {matches.map((match) => (
+        <Match key={match} matches={match} />
+      ))}
     </>
   );
 };
