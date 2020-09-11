@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&family=Kufam:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #1C2126;
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #F2F2F2;
+  margin: 0;
+  font-family: "Kufam", cursive;
+}
+
+h1 {
+  font-size: 3.0524em;
+}
+
+h2 {
+  font-size: 2.4414em;
+}
+
+h3 {
+  font-size: 1.9534em;
+}
+
+h4 {
+  font-size: 1.5634em;
+}
+
+h5 {
+  font-size: 1.254em;
+}
+
+span,
+p {
+  color: #F2F2F2;
+  font-family: "Raleway", sans-serif;
+}
+
+small {
+  color: #F2F2F2;
+  font-size: 0.8em;
+}
+
+
+/* Color Theme Swatches in Hex */
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-1-hex { color: #1E2759; }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-2-hex { color: #182240; }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-3-hex { color: #1C2126; }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-4-hex { color: #707F8C; }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-5-hex { color: #F2F2F2; }
+
+/* Color Theme Swatches in RGBA */
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-1-rgba { color: rgba(30, 39, 89, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-2-rgba { color: rgba(24, 34, 63, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-3-rgba { color: rgba(28, 32, 38, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-4-rgba { color: rgba(112, 127, 140, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-5-rgba { color: rgba(242, 242, 242, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-1-hsla { color: hsla(230, 49, 23, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-2-hsla { color: hsla(225, 44, 17, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-3-hsla { color: hsla(213, 14, 13, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-4-hsla { color: hsla(208, 11, 49, 1); }
+.Star-Wars-Jedi:-Fallen-Order-Skill-Tree-UI-5-hsla { color: hsla(0, 0, 95, 1); }
