@@ -1,14 +1,17 @@
+import styled from "styled-components"
+
 import fetchTftChallenger from "../../utils/fetchTftChallenger";
 
-const ChallengerLeague = () => {
+const ChallengerLeague: React.FC = () => {
   const { challengerData, isError, isLoading } = fetchTftChallenger();
 
   if (isLoading) return <div>Loading Challenger League...</div>;
+  if (isError) return <div>Could not retrieve the top 100 list of players</div>
 
   return (
     <>
       {console.log(challengerData)}
-      <h2>{challengerData.tier}</h2>
+      <h3>{challengerData.tier}</h3>
       {challengerData.entries
         .sort((a: { leaguePoints: number }, b: { leaguePoints: number }) => b.leaguePoints - a.leaguePoints)
         .slice(0, 20)
@@ -24,17 +27,24 @@ const ChallengerLeague = () => {
             },
             index: number
           ) => (
-            <div key={entry.summonerId}>
+            <ChallengerContainer key={entry.summonerId}>
               <p>
                 {index + 1}) Name: {entry.summonerName}
               </p>
               <span>LP: {entry.leaguePoints}</span> | <span>Wins: {entry.wins}</span> |{" "}
               <span>Loses: {entry.losses}</span> | <span>Veteran: {entry.veteran ? "Yes" : "No"}</span>
-            </div>
+            </ChallengerContainer>
           )
         )}
     </>
   );
 };
+
+export const ChallengerContainer = styled.div`
+  width: 800px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+`
 
 export default ChallengerLeague;
