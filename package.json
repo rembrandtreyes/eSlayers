@@ -13,6 +13,7 @@
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "styled-components": "^5.1.1",
     "swr": "^0.3.0",
     "unfetch": "^4.1.0"
   },
@@ -21,6 +22,7 @@
     "@types/react": "^16.9.41",
     "cross-env": "^7.0.2",
     "http-proxy-middleware": "^1.0.4",
+    "prettier": "^2.1.1",
     "typescript": "^3.9.6"
   }
 }
