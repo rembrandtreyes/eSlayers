@@ -1,17 +1,17 @@
-import fetchSummoner from "../../utils/fetchSummoner";
+import fetchSummoner from "../../utils/fetchSummoner"
 
 interface SummonerProps {
-  name: string;
+  name: string
 }
 
 const Summoner: React.FC<SummonerProps> = ({ name }) => {
-  const summoner = fetchSummoner(name);
+  const summoner = fetchSummoner(name)
 
   return (
     <>
       <h1>{summoner.name}</h1>
     </>
-  );
-};
+  )
+}
 
-export default Summoner;
+export default Summoner

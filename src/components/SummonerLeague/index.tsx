@@ -1,1 +1,1 @@
-export { default } from "./SummonerLeague";
+export { default } from "./SummonerLeague"

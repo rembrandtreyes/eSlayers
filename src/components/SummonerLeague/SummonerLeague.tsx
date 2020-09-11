@@ -1,10 +1,10 @@
-import fetchLeague from "../../utils/fetchLeague";
-import fetchSummoner from "../../utils/fetchSummoner";
+import fetchLeague from "../../utils/fetchLeague"
+import fetchSummoner from "../../utils/fetchSummoner"
 
 const SummonerLeague = ({ name }) => {
-  const summoner = fetchSummoner(name);
-  const league = fetchLeague(summoner.id);
-  const winRate = (league[0].wins / league[0].losses) * 100;
+  const summoner = fetchSummoner(name)
+  const league = fetchLeague(summoner.id)
+  const winRate = (league[0].wins / league[0].losses) * 100
 
   return (
     <div>
@@ -15,7 +15,7 @@ const SummonerLeague = ({ name }) => {
       <h2>Loses: {league[0].losses}</h2>
       <h2>Win Rate: {winRate.toFixed(2)}%</h2>
     </div>
-  );
-};
+  )
+}
 
-export default SummonerLeague;
+export default SummonerLeague

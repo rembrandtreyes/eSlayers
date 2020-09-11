@@ -1,6 +1,6 @@
-import useSWR from "swr";
+import useSWR from "swr"
 
-import fetcher from "./fetcher";
+import fetcher from "./fetcher"
 
 const fetchLeague = (summonerId: number) => {
   const { data: league, error } = useSWR(
@@ -8,12 +8,12 @@ const fetchLeague = (summonerId: number) => {
       ? `/na1/tft/league/v1/entries/by-summoner/${summonerId}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
       : null,
     fetcher
-  );
+  )
 
-  if (!league) return "Loading...";
-  if (error) return "Error loading";
+  if (!league) return "Loading..."
+  if (error) return "Error loading"
 
-  return league;
-};
+  return league
+}
 
-export default fetchLeague;
+export default fetchLeague

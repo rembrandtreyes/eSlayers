@@ -1,23 +1,23 @@
-import React from "react";
+import React from "react"
 
-import fetchTftMatch from "../../utils/fetchTftMatch";
-import Participant from "../Participant";
+import fetchTftMatch from "../../utils/fetchTftMatch"
+import Participant from "../Participant"
 
 interface MatchProps {
-  matches: string;
+  matches: string
 }
 
 const Match: React.FC<MatchProps> = ({ matches }) => {
-  const { match, isLoading, isError } = fetchTftMatch(matches);
+  const { match, isLoading, isError } = fetchTftMatch(matches)
 
-  if (isLoading) return <p>Loading Match</p>;
-  if (isError) return <p>Error loading match</p>;
+  if (isLoading) return <p>Loading Match</p>
+  if (isError) return <p>Error loading match</p>
 
-  const info = match.info;
-  const unixToDate = new Date(info.game_datetime * 1000);
-  const humanDate = unixToDate.toLocaleString();
-  const participants = info.participants;
-  console.log(participants);
+  const info = match.info
+  const unixToDate = new Date(info.game_datetime * 1000)
+  const humanDate = unixToDate.toLocaleString()
+  const participants = info.participants
+  console.log(participants)
 
   return (
     <div>
@@ -34,14 +34,17 @@ const Match: React.FC<MatchProps> = ({ matches }) => {
           <h5>Traits</h5>
           {participant.traits.map((trait) => (
             <div key={trait.name}>
-              <span>Trait Name: {trait.name}</span> | <span>Number of units: {trait.num_units}</span> |{" "}
-              <span>Tier Style: {trait.style}</span> | <span>Tier of trait: {trait.tier_current}</span>
+              <span>Trait Name: {trait.name}</span> |{" "}
+              <span>Number of units: {trait.num_units}</span> |{" "}
+              <span>Tier Style: {trait.style}</span> |{" "}
+              <span>Tier of trait: {trait.tier_current}</span>
             </div>
           ))}
           <h5>Units</h5>
           {participant.units.map((unit) => (
             <div key={unit.character_id}>
-              <span>Unit name: {unit.character_id}</span> | <span>Tier: {unit.tier}</span> |{" "}
+              <span>Unit name: {unit.character_id}</span> |{" "}
+              <span>Tier: {unit.tier}</span> |{" "}
               {unit.items.map((item) => (
                 <span>{item} </span>
               ))}
@@ -51,7 +54,7 @@ const Match: React.FC<MatchProps> = ({ matches }) => {
         </React.Fragment>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Match;
+export default Match

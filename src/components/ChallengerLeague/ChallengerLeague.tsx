@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-import fetchTftChallenger from "../../utils/fetchTftChallenger";
+import fetchTftChallenger from "../../utils/fetchTftChallenger"
 
 const ChallengerLeague: React.FC = () => {
-  const { challengerData, isError, isLoading } = fetchTftChallenger();
+  const { challengerData, isError, isLoading } = fetchTftChallenger()
 
-  if (isLoading) return <div>Loading Challenger League...</div>;
+  if (isLoading) return <div>Loading Challenger League...</div>
   if (isError) return <div>Could not retrieve the top 100 list of players</div>
 
   return (
@@ -13,17 +13,20 @@ const ChallengerLeague: React.FC = () => {
       {console.log(challengerData)}
       <h3>{challengerData.tier}</h3>
       {challengerData.entries
-        .sort((a: { leaguePoints: number }, b: { leaguePoints: number }) => b.leaguePoints - a.leaguePoints)
+        .sort(
+          (a: { leaguePoints: number }, b: { leaguePoints: number }) =>
+            b.leaguePoints - a.leaguePoints
+        )
         .slice(0, 20)
         .map(
           (
             entry: {
-              summonerId: React.Key;
-              summonerName: React.ReactNode;
-              leaguePoints: React.ReactNode;
-              wins: React.ReactNode;
-              losses: React.ReactNode;
-              veteran: boolean;
+              summonerId: React.Key
+              summonerName: React.ReactNode
+              leaguePoints: React.ReactNode
+              wins: React.ReactNode
+              losses: React.ReactNode
+              veteran: boolean
             },
             index: number
           ) => (
@@ -31,14 +34,16 @@ const ChallengerLeague: React.FC = () => {
               <p>
                 {index + 1}) Name: {entry.summonerName}
               </p>
-              <span>LP: {entry.leaguePoints}</span> | <span>Wins: {entry.wins}</span> |{" "}
-              <span>Loses: {entry.losses}</span> | <span>Veteran: {entry.veteran ? "Yes" : "No"}</span>
+              <span>LP: {entry.leaguePoints}</span> |{" "}
+              <span>Wins: {entry.wins}</span> |{" "}
+              <span>Loses: {entry.losses}</span> |{" "}
+              <span>Veteran: {entry.veteran ? "Yes" : "No"}</span>
             </ChallengerContainer>
           )
         )}
     </>
-  );
-};
+  )
+}
 
 export const ChallengerContainer = styled.div`
   width: 800px;
@@ -47,4 +52,4 @@ export const ChallengerContainer = styled.div`
   background-color: #e3e3e3;
 `
 
-export default ChallengerLeague;
+export default ChallengerLeague

@@ -1,16 +1,16 @@
-import Summoner from "../../components/Summoner";
-import SummonerLeague from "../../components/SummonerLeague";
-import fetchTftMatches from "../../utils/fetchTftMatches";
-import fetchSummoner from "../../utils/fetchSummoner";
+import Summoner from "../../components/Summoner"
+import SummonerLeague from "../../components/SummonerLeague"
+import fetchTftMatches from "../../utils/fetchTftMatches"
+import fetchSummoner from "../../utils/fetchSummoner"
 
-import Match from "../../components/Match";
+import Match from "../../components/Match"
 
 const SummonerPage = ({ name }) => {
-  const summoner = fetchSummoner(name);
-  const { matches, isLoading, isError } = fetchTftMatches(summoner.puuid);
+  const summoner = fetchSummoner(name)
+  const { matches, isLoading, isError } = fetchTftMatches(summoner.puuid)
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error</div>;
+  if (isLoading) return <div>Loading...</div>
+  if (isError) return <div>Error</div>
 
   return (
     <div>
@@ -20,7 +20,7 @@ const SummonerPage = ({ name }) => {
         <Match key={match} matches={match} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SummonerPage;
+export default SummonerPage

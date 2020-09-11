@@ -1,1 +1,1 @@
-export { default } from "./SummonerPage";
+export { default } from "./SummonerPage"
