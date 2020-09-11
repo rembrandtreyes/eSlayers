@@ -2,7 +2,7 @@ import Router from "next/router"
 import { useState } from "react"
 import styled from "styled-components"
 
-import ChallengerLeague from "../../components/ChallengerLeague"
+import ChallengerLeague from "components/ChallengerLeague"
 
 const HomePage = () => {
   const [input, setInput] = useState("")
@@ -40,6 +40,7 @@ export const Title = styled.h1`
   font-family: "Geostar Fill", cursive !important;
   line-height: 1.5;
   margin-bottom: 64px;
+  text-align: center;
 `
 
 export const HomePageWrapper = styled.div`

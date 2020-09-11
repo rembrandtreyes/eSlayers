@@ -1,5 +1,5 @@
-import fetchLeague from "../../utils/fetchLeague"
-import fetchSummoner from "../../utils/fetchSummoner"
+import fetchLeague from "utils/fetchLeague"
+import fetchSummoner from "utils/fetchSummoner"
 
 const SummonerLeague = ({ name }) => {
   const summoner = fetchSummoner(name)

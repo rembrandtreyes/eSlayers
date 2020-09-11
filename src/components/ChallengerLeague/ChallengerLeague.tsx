@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import fetchTftChallenger from "../../utils/fetchTftChallenger"
+import fetchTftChallenger from "utils/fetchTftChallenger"
 
 const ChallengerLeague: React.FC = () => {
   const { challengerData, isError, isLoading } = fetchTftChallenger()

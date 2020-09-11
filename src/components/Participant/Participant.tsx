@@ -1,4 +1,4 @@
-import { fetchSummonerPuuid } from "../../utils/fetchSummoner"
+import { fetchSummonerPuuid } from "utils/fetchSummoner"
 
 interface ParticipantProps {
   puuid: string

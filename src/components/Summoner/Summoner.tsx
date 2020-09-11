@@ -1,4 +1,4 @@
-import fetchSummoner from "../../utils/fetchSummoner"
+import fetchSummoner from "utils/fetchSummoner"
 
 interface SummonerProps {
   name: string

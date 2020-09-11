@@ -1,7 +1,7 @@
 import React from "react"
 
-import fetchTftMatch from "../../utils/fetchTftMatch"
-import Participant from "../Participant"
+import fetchTftMatch from "utils/fetchTftMatch"
+import Participant from "components/Participant"
 
 interface MatchProps {
   matches: string

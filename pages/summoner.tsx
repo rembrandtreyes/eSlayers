@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import SummonerPage from "../src/pages/SummonerPage"
+import SummonerPage from "components/pages/SummonerPage"
 
 const Summoner: React.FC = () => {
   const router = useRouter()

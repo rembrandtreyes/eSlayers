@@ -1,9 +1,9 @@
-import Summoner from "../../components/Summoner"
-import SummonerLeague from "../../components/SummonerLeague"
-import fetchTftMatches from "../../utils/fetchTftMatches"
-import fetchSummoner from "../../utils/fetchSummoner"
+import Summoner from "components/Summoner"
+import SummonerLeague from "components/SummonerLeague"
+import fetchTftMatches from "utils/fetchTftMatches"
+import fetchSummoner from "utils/fetchSummoner"
 
-import Match from "../../components/Match"
+import Match from "components/Match"
 
 const SummonerPage = ({ name }) => {
   const summoner = fetchSummoner(name)
