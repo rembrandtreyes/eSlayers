@@ -1,30 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# eSalyers - Riot Games Stats site
+The vision is to allow players to access their stats from all the different Riot games.
+Currently we only support:
+#### Game: Team Fight Tactics and 
+#### Regions: North America
 
 ## Getting Started
+This project uses Riot Games developer API. You will need to create an account at 
+[https://developer.riotgames.com/](https://developer.riotgames.com/) and generate a 
+DEVELOPMENT API KEY to utilize this app.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone this repo `git clone https://github.com/rembrandtreyes/eSlayers.git`
+2. `cd eSlayers`
+3. Run `yarn install`
+4. Start the server with `yarn dev`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Developement API Key
+Once you have your development api key generated locate a file called `.env.local.template`
+duplicate that file and rename it `.env.local` and paste in your riot api key
 
-## Learn More
+It should look like this
+`NEXT_PUBLIC_API_KEY=RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 
-To learn more about Next.js, take a look at the following resources:
+Restart your dev server and you should be able to access the API now. Enter in a user name
+to test it out. If you do not play any Riot games you can use some of these summoner names to test.
+* `scarra`
+* `rjeezy`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### TODO:
+1. Style the Home Page
+2. Style the player cards for top players list
+3. Style the Player profile page
+4. Add more regions for players to search
+5. Optimize fetch requests
+6. Add more games for players to search
+7. Upgrade assets to set 4 for TFT
