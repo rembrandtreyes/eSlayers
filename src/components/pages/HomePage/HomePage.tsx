@@ -1,7 +1,10 @@
 import Router from "next/router"
 import { useState } from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
+import colors from "theme/colors"
 import ChallengerLeague from "components/ChallengerLeague"
 
 const HomePage = () => {
@@ -18,19 +21,20 @@ const HomePage = () => {
   return (
     <HomePageWrapper>
       <Title>eSlayers</Title>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <h2>Search your username</h2>
-          <input
+      <HomeForm onSubmit={handleSubmit}>
+        <SearchLabel htmlFor="Search">
+          <SearchText>Search Your Username</SearchText>
+          <SearchInput
             placeholder="Username"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-        </label>
-        {/* <input type="submit" value="Submit" /> */}
-        <button type="submit">Test</button>
-      </form>
+        </SearchLabel>
+        <SearchButton type="submit">
+          <FontAwesomeIcon icon={faSearch} size="2x" />
+        </SearchButton>
+      </HomeForm>
       <ChallengerLeague />
     </HomePageWrapper>
   )
@@ -49,6 +53,43 @@ export const HomePageWrapper = styled.div`
 
 export const HomeForm = styled.form`
   width: fit-content;
+  margin: 112px auto;
+  padding: 32px 60px;
+  border-radius: 24px;
+  background-color: ${colors.brandPrimary};
+  position: relative;
+`
+
+export const SearchLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+`
+
+export const SearchText = styled.h2`
+  margin-bottom: 16px;
+`
+
+export const SearchInput = styled.input`
+  padding: 16px;
+  font-size: 1.254rem;
+  color: ${colors.brandAccentPrimary};
+
+  &:focus {
+    outline: none;
+  }
+`
+
+export const SearchButton = styled.button`
+  position: absolute;
+  right: 60px;
+  bottom: 33px;
+  padding: 15px;
+  border: none;
+  background: #ffffff;
+
+  svg {
+    color: #1e2759;
+  }
 `
 
 export default HomePage
