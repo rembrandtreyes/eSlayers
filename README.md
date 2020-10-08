@@ -1,7 +1,8 @@
 # eSalyers - Riot Games Stats site
 The vision is to allow players to access their stats from all the different Riot games.
 Currently we only support:
-#### Game: Team Fight Tactics and 
+#### Game: Team Fight Tactics
+and 
 #### Regions: North America
 
 ## Getting Started
