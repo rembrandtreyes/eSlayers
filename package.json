@@ -20,7 +20,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.1.1",
-    "swr": "0.3.0",
+    "swr": "0.5.7",
     "unfetch": "4.1.0"
   },
   "devDependencies": {
